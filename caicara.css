@@ -1,0 +1,263 @@
+:root {
+    --azulp: #0b333d;
+    --azulc: #7c7c7c;
+    --branco: #f7f7f7;
+    --dark6: #333333; /* Adiciona um valor ao dark6 se ele não estiver definido */
+    --verdep:hsl(203, 77%, 9%);
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0; /* Certifique-se de que não há margens no body */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azulp);
+    width: 100%;
+    height: 110px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.img-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img-header img {
+    height: 80%;
+    object-fit: contain;
+}
+
+.topo-01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: var(--verdep);
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+}
+
+.topo-01 h1, .topo-01 p {
+    padding: 2rem;
+    color: var(--branco);
+    margin: 0; /* Remove margens externas para centralização perfeita */
+}
+
+.linha-do-tempo {
+    display: flex;
+    justify-content: space-between; /* Distribui igualmente os eventos */
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.evento {
+    position: relative;
+    text-align: center;
+    width: 16%; /* Garante que todos os eventos tenham o mesmo tamanho */
+}
+
+.circulo {
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 10px auto;
+    z-index: 1;
+}
+
+.ano {
+    font-size: 18px;
+    color: white;
+}
+
+.descricao {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+}
+
+.linha-do-tempo::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    z-index: 0;
+}
+
+.evento::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    z-index: -1;
+}
+
+.topo-02 {
+    position: relative; /* Define que o conteúdo dentro dessa div será posicionado relativamente */
+    width: 100%; /* Faz a div ocupar toda a largura disponível */
+    height: auto; /* A altura da div será ajustada conforme o conteúdo */
+}
+
+.img-topo-02 {
+    width: 100%; /* A imagem ocupará 100% da largura da div */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+.topo-02 h2 {
+    position: absolute; /* Posiciona o texto de forma absoluta em relação à div pai (topo-02) */
+    top: 50%; /* Centraliza o texto verticalmente (metade da altura) */
+    left: 50%; /* Centraliza o texto horizontalmente (metade da largura) */
+    transform: translate(-50%, -50%); /* Ajusta a posição para garantir que o centro do texto esteja exatamente no meio da imagem */
+    color: var(--branco); /* Define a cor do texto como branca para ser visível sobre a imagem */
+    text-align: center; /* Centraliza o texto */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 0 10px; /* Adiciona um pequeno espaçamento nas laterais para evitar que o texto encoste na borda */
+}
+
+strong {
+    color: var(--azulp);
+}
+
+.topo-03 {
+    position: relative; /* Define que o conteúdo dentro dessa div será posicionado relativamente */
+    width: 100%; /* Faz a div ocupar toda a largura disponível */
+    height: auto; /* A altura da div será ajustada conforme o conteúdo */
+}
+
+.img-topo-03 {
+    width: 100%; /* A imagem ocupará 100% da largura da div */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+.topo-03 h2 {
+    position: absolute; /* Posiciona o texto de forma absoluta em relação à div pai (topo-02) */
+    top: 50%; /* Centraliza o texto verticalmente (metade da altura) */
+    left: 50%; /* Centraliza o texto horizontalmente (metade da largura) */
+    transform: translate(-50%, -50%); /* Ajusta a posição para garantir que o centro do texto esteja exatamente no meio da imagem */
+    color: var(--branco); /* Define a cor do texto como branca para ser visível sobre a imagem */
+    text-align: center; /* Centraliza o texto */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 0 10px; /* Adiciona um pequeno espaçamento nas laterais para evitar que o texto encoste na borda */
+}
+
+.fo-fi {
+    background-color: var(--azulp);
+    color: var(--azulc);
+    padding: 40px 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Logo separada e elevada */
+.footer-logo-container {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Footer columns alinhadas independentemente da logo */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li strong {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Redes sociais */
+.social-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--azulc);
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Footer inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--azulp);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--verdep);
+    width: 8px;
+}
